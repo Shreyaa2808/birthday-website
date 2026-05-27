@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Dad Wrapped 2026</title>
+
+  <!-- GOOGLE FONTS -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      background:#0f0f0f;
+      font-family:'Poppins',sans-serif;
+      color:white;
+      overflow-x:hidden;
+      min-height:100vh;
+      padding:80px 20px;
+      position:relative;
+    }
+
+    /* GLOW */
+   body{
+  transition:0.8s ease;
+}.next-btn{
+
+  margin:80px auto 20px;
+
+  display:block;
+
+  padding:15px 45px;
+
+  border:none;
+
+  border-radius:40px;
+
+  background:
+  linear-gradient(to right,#d4af37,#f5d36a);
+
+  color:#111;
+
+  font-size:16px;
+
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:0.4s ease;
+
+  box-shadow:
+  0 0 20px rgba(212,175,55,0.2);
+
+}
+
+.next-btn:hover{
+
+  transform:scale(1.05);
+
+  box-shadow:
+  0 0 30px rgba(212,175,55,0.5);
+
+}
+    body::before{
+      content:'';
+      position:fixed;
+      width:600px;
+      height:600px;
+      background:rgba(212,175,55,0.06);
+      border-radius:50%;
+      filter:blur(140px);
+      top:-200px;
+      right:-200px;
+      z-index:-1;
+    }
+
+    /* HEADER */
+
+    .header{
+      text-align:center;
+      margin-bottom:80px;
+    }
+
+    .header h1{
+      font-size:70px;
+      font-family:'Cinzel',serif;
+      margin-bottom:20px;
+    }
+
+    .header p{
+      color:#c7c7c7;
+      font-size:18px;
+    }
+
+    /* GRID */
+
+    .stats-grid{
+      max-width:1300px;
+      margin:auto;
+
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+      gap:35px;
+    }
+
+    /* CARDS */
+
+    .card{
+      background:rgba(255,255,255,0.04);
+
+      border:1px solid rgba(255,255,255,0.08);
+
+      border-radius:30px;
+
+      padding:40px 35px;
+
+      backdrop-filter:blur(10px);
+
+      transition:0.5s ease;
+
+      position:relative;
+
+      overflow:hidden;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+      border-color:#d4af37;
+
+      box-shadow:
+      0 0 40px rgba(212,175,55,0.15);
+    }
+
+    /* GOLD SHINE */
+
+    .card::before{
+      content:'';
+      position:absolute;
+
+      width:200%;
+      height:200%;
+
+      background:
+      linear-gradient(
+      120deg,
+      transparent,
+      rgba(255,255,255,0.06),
+      transparent
+      );
+
+      transform:rotate(25deg);
+
+      top:-150%;
+      left:-150%;
+
+      transition:1s;
+    }
+
+    .card:hover::before{
+      top:100%;
+      left:100%;
+    }
+
+    /* ICON */
+
+    .emoji{
+      font-size:40px;
+      margin-bottom:25px;
+    }
+
+    /* TITLE */
+
+    .title{
+      font-size:18px;
+      color:#d4af37;
+      margin-bottom:15px;
+      letter-spacing:1px;
+    }
+
+    /* VALUE */
+
+    .value{
+      font-size:48px;
+      font-weight:700;
+      margin-bottom:15px;
+    }
+
+    /* DESCRIPTION */
+
+    .desc{
+      color:#c8c8c8;
+      line-height:1.8;
+      font-size:15px;
+    }
+
+    /* FOOTER MESSAGE */
+
+    .footer{
+      margin-top:100px;
+      text-align:center;
+    }
+
+    .footer h2{
+      font-size:40px;
+      font-family:'Cinzel',serif;
+      margin-bottom:20px;
+    }
+
+    .footer p{
+      color:#c5c5c5;
+      font-size:18px;
+      max-width:700px;
+      margin:auto;
+      line-height:1.9;
+    }
+
+    /* MOBILE */
+
+    @media(max-width:768px){
+
+      .header h1{
+        font-size:44px;
+      }
+
+      .header p{
+        font-size:15px;
+      }
+
+      .value{
+        font-size:36px;
+      }
+
+      .footer h2{
+        font-size:30px;
+      }
+
+      .footer p{
+        font-size:15px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <section class="header">
+
+    <h1>Dad Wrapped 2026</h1>
+
+    <p>
+      A quick look at the legend himself.
+    </p>
+
+  </section>
+
+  <!-- STATS -->
+
+  <section class="stats-grid">
+
+    <!-- CARD 1 -->
+
+    <div class="card">
+
+      <div class="emoji">🧑‍⚕️</div>
+
+      <div class="title">
+        Patients saved
+      </div>
+
+      <div class="value">
+        ∞
+      </div>
+
+      <div class="desc">
+        Scientists are still trying to calculate the actual number.
+      </div>
+
+    </div>
+
+    <!-- CARD 2 -->
+
+    <div class="card">
+
+      <div class="emoji">🍽️</div>
+
+      <div class="title">
+        Food concerns shown
+      </div>
+
+      <div class="value">
+        12,547
+      </div>
+
+      <div class="desc">
+        The first question always being "did you eat?".
+      </div>
+
+    </div>
+
+    <!-- CARD 3 -->
+
+    <div class="card">
+
+      <div class="emoji">🚗</div>
+
+      <div class="title">
+        Driving Advice Given
+      </div>
+
+      <div class="value">
+        9,482
+      </div>
+
+      <div class="desc">
+        Even Google Maps could never compete.
+      </div>
+
+    </div>
+
+    <!-- CARD 4 -->
+
+    <div class="card">
+
+      <div class="emoji">🛠️</div>
+
+      <div class="title">
+        Things Fixed
+      </div>
+
+      <div class="value">
+        Everything
+      </div>
+
+      <div class="desc">
+        From broken furniture to switch boards to broken moods.
+      </div>
+
+    </div>
+
+    <!-- CARD 5 -->
+
+    <div class="card">
+
+      <div class="emoji">❤️</div>
+
+      <div class="title">
+        Times You Supported Us
+      </div>
+
+      <div class="value">
+        Countless
+      </div>
+
+      <div class="desc">
+        The reason we always felt safe and strong.
+      </div>
+
+    </div>
+
+    <!-- CARD 6 -->
+
+    <div class="card">
+
+      <div class="emoji">👑</div>
+
+      <div class="title">
+        Family Hero Level
+      </div>
+
+      <div class="value">
+        Legendary
+      </div>
+
+      <div class="desc">
+        No explanation needed.
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <section class="footer">
+
+    <h2>
+      More Than Just A Dad
+    </h2>
+
+    <p>
+      Behind every happy memory, every laugh and every moment of strength — there was always you.
+    </p>
+
+  </section>
+  <button class="next-btn" onclick="nextPage()">
+  Continue
+</button>
+<script>
+
+function nextPage(){
+
+  document.body.style.opacity = "0";
+
+  setTimeout(() => {
+
+    window.location.href = "finale.html";
+
+  },700);
+
+}
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Papa</title>
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Heading Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Body Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      height:100vh;
+      overflow:hidden;
+      background:linear-gradient(to bottom right,#0f0f0f,#1c1c1c);
+      font-family:'Poppins',sans-serif;
+      color:white;
+      position:relative;
+      transition:1s ease;
+    }
+
+    /* BACKGROUND GLOW */
+
+    body::before{
+      content:'';
+      position:absolute;
+      width:500px;
+      height:500px;
+      background:rgba(255,215,0,0.05);
+      border-radius:50%;
+      filter:blur(100px);
+      top:-100px;
+      right:-100px;
+    }
+
+    /* TOP SMALL TEXT */
+
+    .top-text{
+      position:absolute;
+      top:30px;
+      width:100%;
+      text-align:center;
+      font-size:14px;
+      letter-spacing:2px;
+      color:#c9c9c9;
+      opacity:0.7;
+    }
+
+    /* MAIN CONTAINER */
+
+    .container{
+      height:100vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      position:relative;
+      z-index:2;
+      padding:20px;
+    }
+
+    /* MAIN HEADING */
+   body{
+  transition:0.8s ease;
+}.next-btn{
+
+  margin:80px auto 20px;
+
+  display:block;
+
+  padding:15px 45px;
+
+  border:none;
+
+  border-radius:40px;
+
+  background:
+  linear-gradient(to right,#d4af37,#f5d36a);
+
+  color:#111;
+
+  font-size:16px;
+
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:0.4s ease;
+
+  box-shadow:
+  0 0 20px rgba(212,175,55,0.2);
+
+}
+
+.next-btn:hover{
+
+  transform:scale(1.05);
+
+  box-shadow:
+  0 0 30px rgba(212,175,55,0.5);
+
+}
+    h1{
+      font-family:'Cinzel',serif;
+      font-size:70px;
+      line-height:1.2;
+      letter-spacing:4px;
+      margin-bottom:20px;
+      animation:fadeUp 1.5s ease;
+    }
+
+    /* SUBTEXT */
+
+    .subtitle{
+      font-size:18px;
+      color:#d6d6d6;
+      margin-bottom:40px;
+      animation:fadeUp 2s ease;
+    }
+
+    /* BUTTON */
+
+    .btn{
+      padding:15px 45px;
+      border:none;
+      border-radius:40px;
+      background:linear-gradient(to right,#d4af37,#f5d36a);
+      color:#111;
+      font-size:16px;
+      font-weight:600;
+      cursor:pointer;
+      transition:0.4s ease;
+      animation:fadeUp 2.5s ease;
+      box-shadow:0 0 20px rgba(212,175,55,0.3);
+    }
+
+    .btn:hover{
+      transform:scale(1.05);
+      box-shadow:0 0 30px rgba(212,175,55,0.6);
+    }
+
+    /* CAKE */
+
+    .cake{
+      position:absolute;
+      bottom:40px;
+      width:160px;
+      animation:floatCake 3s ease-in-out infinite;
+    }
+
+    /* BALLOONS */
+
+    .balloon{
+      position:absolute;
+      width:80px;
+      height:100px;
+      background:#2d2d2d;
+      border-radius:50%;
+      animation:float 5s ease-in-out infinite;
+    }
+
+    .balloon::after{
+      content:'';
+      position:absolute;
+      width:2px;
+      height:120px;
+      background:#888;
+      top:100px;
+      left:50%;
+    }
+
+    /* DIFFERENT BALLOON POSITIONS */
+
+    .b1{
+      left:8%;
+      bottom:100px;
+      animation-delay:0s;
+    }
+
+    .b2{
+      left:20%;
+      bottom:60px;
+      width:70px;
+      height:90px;
+      animation-delay:1s;
+    }
+
+    .b3{
+      right:10%;
+      bottom:120px;
+      animation-delay:2s;
+    }
+
+    .b4{
+      right:25%;
+      bottom:70px;
+      width:70px;
+      height:90px;
+      animation-delay:3s;
+    }
+
+    /* ANIMATIONS */
+
+    @keyframes fadeUp{
+      from{
+        opacity:0;
+        transform:translateY(40px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    @keyframes float{
+      0%,100%{
+        transform:translateY(0px);
+      }
+      50%{
+        transform:translateY(-20px);
+      }
+    }
+
+    @keyframes floatCake{
+      0%,100%{
+        transform:translateY(0px);
+      }
+      50%{
+        transform:translateY(-10px);
+      }
+    }
+
+    /* MOBILE RESPONSIVE */
+
+    @media(max-width:768px){
+
+      h1{
+        font-size:42px;
+      }
+
+      .subtitle{
+        font-size:15px;
+        padding:0 10px;
+      }
+
+      .btn{
+        padding:13px 35px;
+        font-size:15px;
+      }
+
+      .cake{
+        width:120px;
+        bottom:30px;
+      }
+
+      .balloon{
+        width:55px;
+        height:75px;
+      }
+
+      .balloon::after{
+        height:90px;
+      }
+
+    }
+
+    img{
+      height: 200px;
+      width: 500px;
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP TEXT -->
+
+  <div class="top-text">
+    A small surprise made with love
+  </div>
+
+  <!-- BALLOONS -->
+
+  <div class="balloon b1"></div>
+  <div class="balloon b2"></div>
+  <div class="balloon b3"></div>
+  <div class="balloon b4"></div>
+
+  <!-- MAIN CONTENT -->
+
+  <div class="container">
+
+    <h1>
+      HAPPY BIRTHDAY <br>
+      PAPA
+    </h1>
+
+    <p class="subtitle">
+      For the man who made life beautiful.
+    </p>
+
+    <button class="btn" onclick="goToJourney()">
+  Begin the Journey
+</button>
+
+    <!-- CAKE IMAGE -->
+    <!-- Replace src with your own cake png -->
+<br><br><br>
+    <img 
+  class="cake"
+  src="cakeimage.png" 
+  alt="cake"
+/>
+
+  </div>
+ 
+<script>
+
+  function goToJourney(){
+
+    document.body.style.opacity = "0";
+
+    setTimeout(() => {
+      window.location.href = "journey.html";
+    }, 800);
+
+  }
+
+</script>
+<script>
+
+function nextPage(){
+
+  document.body.style.opacity = "0";
+
+  setTimeout(() => {
+
+    window.location.href = "NEXT_PAGE.html";
+
+  },700);
+
+}
+
+</script>
+</body>
+</html>
