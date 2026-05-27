@@ -77,21 +77,6 @@
   0 0 20px rgba(212,175,55,0.2);
 
 }
-.music-btn{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  width:55px;
-  height:55px;
-  border:none;
-  border-radius:50%;
-  background:#d4af37;
-  color:black;
-  font-size:22px;
-  cursor:pointer;
-  box-shadow:0 0 20px rgba(212,175,55,0.5);
-  z-index:999;
-}
 
 .next-btn:hover{
 
@@ -349,35 +334,7 @@
 
 
 </script>
-<audio id="bg-music" loop>
-  <source src="song.mp3" type="audio/mp3">
-</audio>
 
-<button class="music-btn" onclick="toggleMusic()">🎵</button>
-
-<script>
-const music = document.getElementById("bg-music");
-
-const savedTime = localStorage.getItem("music-time");
-
-music.currentTime = savedTime ? parseFloat(savedTime) : 0;
-
-window.addEventListener("click", () => {
-    music.play();
-}, { once: true });
-
-setInterval(() => {
-    localStorage.setItem("music-time", music.currentTime);
-}, 1000);
-
-function toggleMusic() {
-    if (music.paused) {
-        music.play();
-    } else {
-        music.pause();
-    }
-}
-</script>
 </body>
 
 </html>
