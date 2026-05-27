@@ -332,20 +332,35 @@
  
 
   
-
 <script>
-
 
 function goToJourney(){
 
-  window.open(
-    "music.html",
-    "_blank",
-    "width=300,height=200"
-  );
+  // Detect Mobile
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
+  // ONLY open music popup on desktop/laptop
+  if(!isMobile){
+
+    // Prevent multiple popups
+    if(!localStorage.getItem("music-window")){
+
+      window.open(
+        "music.html",
+        "musicWindow",
+        "width=300,height=200"
+      );
+
+      localStorage.setItem("music-window","opened");
+
+    }
+
+  }
+
+  // Smooth fade animation
   document.body.style.opacity = "0";
 
+  // Go to next page
   setTimeout(() => {
 
     window.location.href = "journey.html";
@@ -353,22 +368,6 @@ function goToJourney(){
   },800);
 
 }
-
-
-</script>
-<script>
-
-// function nextPage(){
-
-//   document.body.style.opacity = "0";
-
-//   setTimeout(() => {
-
-//     window.location.href = "NEXT_PAGE.html";
-
-//   },700);
-
-// }
 
 </script>
 </body>
